@@ -90,7 +90,7 @@ const index = (props) => {
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
                   <Button
-                    onClick={() => navigate("movie-setting")}
+                    onClick={() => navigate("/movie-setting")}
                     key={item}
                     sx={{ color: "#fff" }}
                   >
