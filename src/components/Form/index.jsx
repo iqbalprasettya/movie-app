@@ -54,8 +54,8 @@ export const MovieForm = () => {
                 endpoint: '/movie',
                 method: 'POST',
                 data: formData
-            })    
-        navigate('/')
+            })
+            navigate("/");
         }catch (error) {
             console.log(error.message)
         }
