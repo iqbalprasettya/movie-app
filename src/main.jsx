@@ -6,7 +6,7 @@ import { MovieEditor } from "./pages/MovieEditor";
 
 const router = createBrowserRouter([
   {
-    path: "/detail",
+    path: "detail/:id",
     element: <Detail />,
   },
 
