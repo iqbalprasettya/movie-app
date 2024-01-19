@@ -3,9 +3,9 @@
     {
       "id": "1",
       "title": "The Shawshank Redemption",
-      "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
       "desc": "loasasasa",
-      "duration": "2j 35m",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
       "genre": "Drama",
       "rating": "9",
       "releaseYear": "2002",
@@ -59,6 +59,30 @@
       "releaseYear": "2002",
       "commentUser": "cecep",
       "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "c4ea",
+      "title": "test",
+      "imageUrl": "test",
+      "desc": "tsets",
+      "duration": "tstest",
+      "genre": "tests",
+      "rating": "4",
+      "releaseYear": "2020",
+      "commentUser": "faw",
+      "comments": "dawdad"
+    },
+    {
+      "id": "fda4",
+      "title": "test",
+      "imageUrl": "test",
+      "desc": "tsets",
+      "duration": "tstest",
+      "genre": "tests",
+      "rating": "4",
+      "releaseYear": "2020",
+      "commentUser": "faw",
+      "comments": "dawdad"
     }
   ]
 }
