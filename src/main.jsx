@@ -3,8 +3,13 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Detail from "./pages/Detail";
 import { MovieEditor } from "./pages/MovieEditor";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
   {
     path: "detail/:id",
     element: <Detail />,
