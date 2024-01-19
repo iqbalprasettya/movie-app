@@ -1,2 +1,77 @@
 @import "../../styles/base.scss";
 
+body {
+  background-color: $background-color;
+}
+
+.container {
+  padding-top: 80px;
+  @include wrapper;
+
+  .movie-detail {
+    @include row;
+    gap: 20px;
+    border: 3px solid $stroke-color;
+    padding: 30px;
+    border-radius: 20px;
+    color: $paragraph-color;
+    margin-bottom: 30px;
+    @include apply-at-md-size {
+      @include col;
+      justify-content: center;
+    }
+    h1 {
+      color: $headline-color;
+    }
+    .movie-image {
+      border-radius: 20px;
+      @include apply-at-md-size {
+        text-align: center;
+      }
+      img {
+        border-radius: 20px;
+        width: 250px;
+        @include apply-at-s-size {
+          width: 220px;
+        }
+      }
+    }
+    .movie-desc {
+      @include col;
+      gap: 10px;
+      .rating-duration {
+        @include row;
+        gap: 20px;
+        font-size: 14px;
+        span {
+          .stars {
+            padding-top: 3px;
+            color: #ddbe11;
+          }
+        }
+      }
+      .desc {
+        @include apply-at-lg-size {
+          width: 560px;
+        }
+      }
+    }
+  }
+  .movie-comments {
+    color: $paragraph-color;
+    padding: 30px 0;
+    h2 {
+      color: $headline-color;
+    }
+    .comment-item {
+      @include row;
+      gap: 20px;
+      border: 3px solid $stroke-color;
+      padding: 30px;
+      border-radius: 20px;
+      .user {
+        font-size: 46px;
+      }
+    }
+  }
+}

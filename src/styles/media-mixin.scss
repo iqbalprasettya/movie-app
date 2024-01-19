@@ -15,6 +15,12 @@ $screen-lg-limit: 1024px;
   }
 }
 
+@mixin apply-at-s-size {
+  @media (max-width: $screen-s-limit) {
+    @content;
+  }
+}
+
 @mixin apply-at-md-size {
   @media (max-width: $screen-md-limit) {
     @content;
