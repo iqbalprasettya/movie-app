@@ -43,11 +43,7 @@ export const MovieForm = () => {
                 method: 'POST',
                 data: formData
             })
-            if(response.status == 200 ){
-                navigate('/')
-            }else{
-                console.log(response.status)
-            }
+            navigate("/");
         }catch (error) {
             console.log(error.message)
         }
