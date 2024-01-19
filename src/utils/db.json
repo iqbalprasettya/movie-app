@@ -3,8 +3,9 @@
         {
             "id": "1",
             "title": "The Shawshank Redemption",
+            "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
             "desc": "loasasasa",
-            "duration": "123",
+            "duration": "2j 35m",
             "genre": "Drama",
             "rating": "9",
             "releaseYear": "2002",
