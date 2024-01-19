@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import { useState, useEffect } from "react";
-import { callAPI } from "../../domain/CallAPI";
+import { CallAPI } from "../../domain/CallAPI";
 import classes from "./style.module.scss";
 import Modal from "@mui/material/Modal";
 import { Link } from "react-router-dom";
@@ -45,7 +45,10 @@ export default function BasicTable() {
 
   const fetchData = async () => {
     try {
-      const response = await callAPI("/movie", "GET");
+      const response = await CallAPI({
+        endpoint: "/movie",
+        method: "GET",
+      });
       setData(response);
     } catch (error) {
       console.log(error);
@@ -55,6 +58,11 @@ export default function BasicTable() {
   return (
     <>
       <div className={classes.container}>
+        <div className={classes.button}>
+          <Link to="/movie-editor">
+            <Button variant="contained">Add User</Button>
+          </Link>
+        </div>
         <TableContainer component={Paper}>
           <Table
             className={classes.table}
@@ -90,8 +98,8 @@ export default function BasicTable() {
                     <TableCell align="center">{data.rating}/10</TableCell>
                     <TableCell align="center">{data.releaseYear}</TableCell>
                     <TableCell align="center" className={classes.action}>
-                      <Link to={`/detail/${data.id}`}>
-                        <Button variant="contained">Detail</Button>
+                      <Link to={`/movie-editor/${data.id}`}>
+                        <Button variant="contained">Edit</Button>
                       </Link>
 
                       <div>
@@ -120,7 +128,10 @@ export default function BasicTable() {
                             <Button onClick={handleClose}>Cancel</Button>
                             <Button
                               onClick={() => {
-                                CallAPI(`/movie/${data.id}`, "DELETE"),
+                                CallAPI({
+                                  endpoint: `/movie/${data.id}`,
+                                  method: "DELETE",
+                                }),
                                   window.location.reload();
                               }}
                             >

@@ -1,15 +1,37 @@
 {
-    "movie": [
-        {
-            "id": "1",
-            "title": "The Shawshank Redemption",
-            "desc": "loasasasa",
-            "duration": "123",
-            "genre": "Drama",
-            "rating": "9",
-            "releaseYear": "2002",
-            "commentUser": "cecep",
-            "comments": "asdsadasdasdas"
-        }
-    ]
+  "movie": [
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "desc": "loasasasa",
+      "duration": "123",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "2",
+      "title": "Iron Man",
+      "desc": "tes",
+      "duration": "123",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "3",
+      "title": "Tenet",
+      "desc": "tesd123",
+      "duration": "123",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    }
+  ]
 }
