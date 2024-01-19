@@ -19,15 +19,22 @@ import { FaBars } from "react-icons/fa6";
 
 import classes from "./style.module.scss";
 
+import { Link, useNavigate } from "react-router-dom";
+
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Setting"];
 
 const index = (props) => {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleMove = () => {
+    navigate("/movie-editor");
   };
 
   const drawer = (
@@ -36,12 +43,14 @@ const index = (props) => {
       sx={{ textAlign: "left", padding: "20px" }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        Movie App
+        <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+          Movie App
+        </p>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem onClick={handleMove} key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "left" }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -74,11 +83,17 @@ const index = (props) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
               >
-                Movie App
+                <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+                  Movie App
+                </p>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: "#fff" }}>
+                  <Button
+                    onClick={() => navigate("movie-editor")}
+                    key={item}
+                    sx={{ color: "#fff" }}
+                  >
                     {item}
                   </Button>
                 ))}

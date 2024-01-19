@@ -3,31 +3,76 @@ import Navbar from "../../components/Navbar";
 
 import classes from "./style.module.scss";
 
-import { FaStar, FaCircleUser } from "react-icons/fa6";
+import { FaStar, FaCircleUser, FaAngleLeft } from "react-icons/fa6";
+
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
+import { CallAPI } from "../../domain/CallAPI";
+
+import { Button } from "@mui/material";
 
 const index = () => {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  const convertMinutesToHours = (minutes) => {
+    if (minutes === 0) {
+        return null; // Jika 0 menit, kembalikan null untuk tidak menampilkan durasi
+    }
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+
+    if (remainingMinutes === 0) {
+        return `${hours} jam`; // Jika 0 menit, hanya tampilkan jam
+    }
+    return `${hours} jam ${remainingMinutes} menit`;
+};
+
+  const fetchMovieData = async () => {
+    const responseMovie = await CallAPI({
+      endpoint: `/movie/${id}`,
+      method: "GET",
+    });
+    setData(responseMovie);
+  };
+
+  useEffect(() => {
+    fetchMovieData();
+  }, []);
+
+  const handleBack = () => {
+    navigate(`/`);
+  };
+
   return (
     <>
       <Navbar />
       <div className={classes["container"]}>
+        <Button onClick={handleBack} className={classes["back-btn"]} variant="contained">
+          <FaAngleLeft /> Back
+        </Button>
         <div className={classes["movie-detail"]}>
           <div className={classes["movie-image"]}>
-            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="" />
+            <img src={data.imageUrl} alt={data.title} />
           </div>
           <div className={classes["movie-desc"]}>
-            <h1>The Shawshank Redemption</h1>
+            <h1>{data.title}</h1>
             <div className={classes["rating-duration"]}>
               <span>
-                <FaStar className={classes["stars"]} /> 9.3
+                <FaStar className={classes["stars"]} /> {data.rating}
               </span>
-              <span>2023 | 2j 35m</span>
+              <span>
+                {data.releaseYear} | {convertMinutesToHours(data.duration)}
+              </span>
             </div>
             <div className={classes["movie-genre"]}>
-              <h5>Drama</h5>
+              <h5>{data.genre}</h5>
             </div>
             <br />
             <div className={classes["desc"]}>
-              <p>The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.</p>
+              <p>{data.desc}</p>
             </div>
           </div>
         </div>
@@ -35,12 +80,12 @@ const index = () => {
           <h2>Comments</h2>
           <br />
           <div className={classes["comment-item"]}>
-            <FaCircleUser className={classes["user"]} />
+            <div className={classes["avatar"]}>
+              <FaCircleUser className={classes["user"]} />
+            </div>
             <div className={classes["comment"]}>
-              <h3>John Doe</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-                . Nemo quas voluptatem eaque nisi, fuga laboriosam od
-                itaque repudiandae! Quod, dolorum?</p>
+              <h3>{data.commentUser}</h3>
+              <p>{data.comments}</p>
             </div>
           </div>
         </div>
