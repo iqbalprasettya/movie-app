@@ -19,16 +19,23 @@ import { FaBars } from "react-icons/fa6";
 
 import classes from "./style.module.scss";
 
+import { useNavigate } from "react-router-dom";
+
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Setting"];
 
 const index = (props) => {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  const handleMove = () => {
+    navigate("/movie-editor");
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "left", padding: "20px" }}>
@@ -38,7 +45,7 @@ const index = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem onClick={handleMove} key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "left" }}>
               <ListItemText primary={item} />
             </ListItemButton>

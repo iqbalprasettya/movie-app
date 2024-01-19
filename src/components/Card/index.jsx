@@ -4,6 +4,18 @@ import { FaRegStar } from "react-icons/fa6";
 
 const Card = ({ title,releaseYear,duration,genre,rating,desc, onClick, imageUrl }) => {
 
+  const convertMinutesToHours = (minutes) => {
+    if (minutes === 0) {
+        return null; // Jika 0 menit, kembalikan null untuk tidak menampilkan durasi
+    }
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+
+    if (remainingMinutes === 0) {
+        return `${hours} jam`; // Jika 0 menit, hanya tampilkan jam
+    }
+    return `${hours} jam ${remainingMinutes} menit`;
+};
   return (
     <div>
       <div className={classes.box} onClick={onClick}>
@@ -13,7 +25,7 @@ const Card = ({ title,releaseYear,duration,genre,rating,desc, onClick, imageUrl 
             {title} ({releaseYear})
           </h2>
           <p className={classes.textMini}>
-            {duration} menit/ {genre}
+            {convertMinutesToHours(duration)} / {genre}
           </p>
           <div className={classes.summary}>
             <p className={classes.textSum}>SUMMARY</p>
