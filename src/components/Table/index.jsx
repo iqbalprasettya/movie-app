@@ -71,13 +71,25 @@ export default function BasicTable() {
           >
             <TableHead>
               <TableRow className={classes.tableTitle}>
-                <TableCell align="center">Title</TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Title
+                </TableCell>
                 {/* <TableCell align="center">Description</TableCell> */}
-                <TableCell align="center">Duration</TableCell>
-                <TableCell align="center">Genre</TableCell>
-                <TableCell align="center">Rating</TableCell>
-                <TableCell align="center">Release Year</TableCell>
-                <TableCell align="center">Action</TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Duration
+                </TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Genre
+                </TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Rating
+                </TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Release Year
+                </TableCell>
+                <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                  Action
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -112,7 +124,7 @@ export default function BasicTable() {
                         <Modal
                           BackdropProps={{
                             style: {
-                              backgroundColor: "rgba(0, 0, 0, 0.1)",
+                              backgroundColor: "rgba(0, 0, 0, 0.4)",
                             },
                           }}
                           open={open}
@@ -123,10 +135,13 @@ export default function BasicTable() {
                           <Box sx={{ ...style, width: 400 }}>
                             <h2 id="parent-modal-title">Delete</h2>
                             <p id="parent-modal-description">
-                              Are you sure want to delete this account?
+                              Are you sure want to delete this movie?
                             </p>
-                            <Button onClick={handleClose}>Cancel</Button>
+                            <Button onClick={handleClose} sx={{ mr: 1 }}>
+                              Cancel
+                            </Button>
                             <Button
+                              sx={{ m: 1, color: "error.main" }}
                               onClick={() => {
                                 CallAPI({
                                   endpoint: `/movie/${data.id}`,

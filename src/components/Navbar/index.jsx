@@ -31,7 +31,10 @@ const index = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "left", padding: "20px" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "left", padding: "20px" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         Movie App
       </Typography>
@@ -48,7 +51,8 @@ const index = (props) => {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <>
@@ -56,10 +60,20 @@ const index = (props) => {
         <AppBar className={classes["navbar"]} component="nav">
           <div className={classes["container"]}>
             <Toolbar>
-              <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" } }}
+              >
                 <FaBars />
               </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              >
                 Movie App
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -83,7 +97,10 @@ const index = (props) => {
             }}
             sx={{
               display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
             }}
           >
             {drawer}
