@@ -1,4 +1,3 @@
-
 export const CallAPI = async ({
     endpoint,
     method,
