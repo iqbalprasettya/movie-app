@@ -60,7 +60,7 @@ export default function BasicTable() {
       <div className={classes.container}>
         <div className={classes.button}>
           <Link to="/movie-editor">
-            <Button variant="contained">Add User</Button>
+            <Button variant="contained">Add Movie</Button>
           </Link>
         </div>
         <TableContainer component={Paper}>
