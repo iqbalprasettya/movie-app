@@ -33,38 +33,49 @@ export const MovieForm = () => {
                             // onChange={handleInputChange}
                             required />
 
-                        <label>Duration</label>
+                        <label>Genre</label>
                         <input
                             type="text"
-                            id="provider"
-                            name="provider"
+                            id="genre"
+                            name="genre"
                             // value={formData.provider}
                             // onChange={handleInputChange}
                             required />
 
-                        <label>Duration</label>
+                        <label>Rating</label>
                         <input
                             type="text"
-                            id="provider"
-                            name="provider"
+                            id="rating"
+                            name="rating"
                             // value={formData.provider}
                             // onChange={handleInputChange}
                             required />
 
-                        <label>Duration</label>
+                        <label>Release Year</label>
                         <input
                             type="text"
-                            id="provider"
-                            name="provider"
+                            id="release"
+                            name="release"
                             // value={formData.provider}
                             // onChange={handleInputChange}
                             required />
+                        
+                        
 
-                        <label>Duration</label>
+                        <label>Username</label>
                         <input
                             type="text"
-                            id="provider"
-                            name="provider"
+                            id="username"
+                            name="username"
+                            // value={formData.provider}
+                            // onChange={handleInputChange}
+                            required />                        
+
+                        <label>Comment</label>
+                        <input
+                            type="text"
+                            id="release"
+                            name="release"
                             // value={formData.provider}
                             // onChange={handleInputChange}
                             required />
