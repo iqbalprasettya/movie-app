@@ -3,9 +3,15 @@
     {
       "id": "1",
       "title": "The Shawshank Redemption",
+<<<<<<< HEAD
+      "desc": "loasasasa",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+=======
       "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
       "desc": "loasasasa",
       "duration": "2j 35m",
+>>>>>>> 470ddfadeabd0015aff2a3299ebf4738200d12f6
       "genre": "Drama",
       "rating": "9",
       "releaseYear": "2002",
@@ -13,6 +19,57 @@
       "comments": "asdsadasdasdas"
     },
     {
+<<<<<<< HEAD
+      "id": "2",
+      "title": "The Shawshank Redemption",
+      "desc": "loasasasa",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "desc": "loasasasa",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "desc": "loasasa dwdwa da  da d ddwd wdawdwadaw da wad wadwadawdwad awd awd awd adawd waada awdwad wadaw dsa",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    },
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "desc": "loasasasa",
+      "duration": "123",
+      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+      "genre": "Drama",
+      "rating": "9",
+      "releaseYear": "2002",
+      "commentUser": "cecep",
+      "comments": "asdsadasdasdas"
+    }
+  ]
+}
+=======
       "id": "0156",
       "title": "The Flash",
       "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
@@ -42,3 +99,4 @@
     }
   ]
 }
+>>>>>>> 470ddfadeabd0015aff2a3299ebf4738200d12f6
