@@ -1,6 +1,13 @@
 import axios from "axios";
 
-export const CallAPI = async ({ endpoint, method, headers, params, data, baseUrl }) => {
+export const CallAPI = async ({
+  endpoint,
+  method,
+  headers,
+  params,
+  data,
+  baseUrl,
+}) => {
   const baseURL = "http://localhost:3000";
   const option = {
     baseURL,

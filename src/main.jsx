@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Detail from "./pages/Detail";
 import { MovieEditor } from "./pages/MovieEditor";
 import Home from "./pages/Home";
+import MovieSetting from "./pages/MovieSetting";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/movie-editor",
     element: <MovieEditor />,
+  },
+  {
+    path: "/movie-setting",
+    element: <MovieSetting />,
   },
 ]);
 

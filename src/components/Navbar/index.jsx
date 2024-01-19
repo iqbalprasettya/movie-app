@@ -43,7 +43,9 @@ const index = (props) => {
       sx={{ textAlign: "left", padding: "20px" }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        <p style={{ cursor: "pointer"}} onClick={() => navigate("/")}>Movie App</p>
+        <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+          Movie App
+        </p>
       </Typography>
       <Divider />
       <List>
@@ -81,11 +83,17 @@ const index = (props) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
               >
-                <p style={{ cursor: "pointer"}} onClick={() => navigate("/")}>Movie App</p>
+                <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+                  Movie App
+                </p>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
-                  <Button onClick={() => navigate("movie-editor")} key={item} sx={{ color: "#fff" }}>
+                  <Button
+                    onClick={() => navigate("movie-setting")}
+                    key={item}
+                    sx={{ color: "#fff" }}
+                  >
                     {item}
                   </Button>
                 ))}
