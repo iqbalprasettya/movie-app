@@ -4,7 +4,12 @@ import styles from './styles.module.scss'
 
 export const MovieForm = () => {
   return (
-    <div>index</div>
+    <div className={styles.formContainer}>
+        <div>
+            <h2>Movie Form</h2>
+            
+        </div>
+    </div>
   )
 }
 
