@@ -8,13 +8,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 export const MovieForm = () => {
-    const navigate = useNavigate()
-    // const [ratingValue, setRatingValue] = useState(0);
-
-    // const handleChangeRating = (event, newValue) => {
-    //     setRatingValue(newValue);
-    // };
-    
+    const navigate = useNavigate()    
     const [formData, setFormData] = useState({
         title: "",
         imageUrl: "",
@@ -35,6 +29,24 @@ export const MovieForm = () => {
         });
     };
 
+    const postMovie = async () => {
+        const response = await CallAPI({
+            endpoint: '/movie',
+            method: 'POST',
+            data: formData
+        })    
+        navigate('/')
+    }
+
+    const updateMovie = async () => {
+        const response = await CallAPI({
+            endpoint: '/movie',
+            method: 'PUT',
+            data: formData
+        })    
+        navigate('/')
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -48,6 +60,8 @@ export const MovieForm = () => {
             console.log(error.message)
         }
     }
+
+    
 
   return (
     <div className={styles.formContainer}>

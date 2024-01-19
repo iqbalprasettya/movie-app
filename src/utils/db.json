@@ -3,15 +3,9 @@
     {
       "id": "1",
       "title": "The Shawshank Redemption",
-<<<<<<< HEAD
-      "desc": "loasasasa",
-      "duration": "123",
-      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
-=======
       "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
       "desc": "loasasasa",
       "duration": "2j 35m",
->>>>>>> 470ddfadeabd0015aff2a3299ebf4738200d12f6
       "genre": "Drama",
       "rating": "9",
       "releaseYear": "2002",
@@ -19,57 +13,6 @@
       "comments": "asdsadasdasdas"
     },
     {
-<<<<<<< HEAD
-      "id": "2",
-      "title": "The Shawshank Redemption",
-      "desc": "loasasasa",
-      "duration": "123",
-      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
-      "genre": "Drama",
-      "rating": "9",
-      "releaseYear": "2002",
-      "commentUser": "cecep",
-      "comments": "asdsadasdasdas"
-    },
-    {
-      "id": "1",
-      "title": "The Shawshank Redemption",
-      "desc": "loasasasa",
-      "duration": "123",
-      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
-      "genre": "Drama",
-      "rating": "9",
-      "releaseYear": "2002",
-      "commentUser": "cecep",
-      "comments": "asdsadasdasdas"
-    },
-    {
-      "id": "1",
-      "title": "The Shawshank Redemption",
-      "desc": "loasasa dwdwa da  da d ddwd wdawdwadaw da wad wadwadawdwad awd awd awd adawd waada awdwad wadaw dsa",
-      "duration": "123",
-      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
-      "genre": "Drama",
-      "rating": "9",
-      "releaseYear": "2002",
-      "commentUser": "cecep",
-      "comments": "asdsadasdasdas"
-    },
-    {
-      "id": "1",
-      "title": "The Shawshank Redemption",
-      "desc": "loasasasa",
-      "duration": "123",
-      "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
-      "genre": "Drama",
-      "rating": "9",
-      "releaseYear": "2002",
-      "commentUser": "cecep",
-      "comments": "asdsadasdasdas"
-    }
-  ]
-}
-=======
       "id": "0156",
       "title": "The Flash",
       "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
@@ -96,7 +39,18 @@
       "releaseYear": "2023",
       "commentUser": "KMalif",
       "comments": "It Was a good movie"
+    },
+    {
+      "id": "fd40",
+      "title": "The Hobbit: The Desolation of Smaug",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4f/The_Hobbit_-_The_Desolation_of_Smaug_theatrical_poster.jpg",
+      "desc": "Thorin Oakenshield and his company are being pursued by Azog and his Orc party. They are ushered by Gandalf to the nearby home of Beorn, a skin-changer who can take the form of a bear. That night, Azog is summoned to Dol Guldur by the Necromancer, who commands him to marshal his forces for war. Azog delegates the hunt for Thorin to his son Bolg. Beorn escorts the company to the borders of Mirkwood, where Gandalf discovers Black Speech imprinted on an old ruin. This, and a prior request by Galadriel, prompt him to investigate the tombs of the Nazgûl. He warns the company to remain on the path before leaving. Upon entering the forest, they lose their way and are ensnared by giant spiders.",
+      "duration": "2 ",
+      "genre": "Sci-Fi",
+      "rating": "9",
+      "releaseYear": "2014",
+      "commentUser": "KMalif",
+      "comments": "It Was Great movie"
     }
   ]
 }
->>>>>>> 470ddfadeabd0015aff2a3299ebf4738200d12f6
