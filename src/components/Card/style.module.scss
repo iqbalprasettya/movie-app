@@ -1,0 +1,55 @@
+@import "../../styles/base.scss";
+
+.box {
+  width: 235px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+  @include col;
+  cursor: pointer;
+  background-color: $bgCard;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  .image {
+    object-fit: contain;
+  }
+  .boxContent {
+    padding: 24px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .textMini{
+        font-size: 12px;
+    }
+    .title {
+      color: black;
+      font-size: 18px;
+      font-weight: $FontWeights700;
+      text-transform: capitalize;
+    }
+    p {
+      color: black;
+      font-size: 14px;
+      font-weight: $FontWeights500;
+    }
+    .summary{
+        @include row;
+        margin:1rem 0;
+        justify-content: space-between;
+        .textSum{
+          font-weight: 700;
+        }
+    }
+    .descSummary{
+        font-size: 13px;
+        font-family: "Roboto", sans-serif;
+    }
+
+    span {
+      font-size: 14px;
+      color: black;
+      font-weight: $FontWeights400;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../styles/base.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include row;
+  height: auto;
+  .content {
+    padding: 5rem 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    @include apply-at-max-lg-size {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include apply-at-lg-size {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include apply-at-md-size {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include apply-at-s-size {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

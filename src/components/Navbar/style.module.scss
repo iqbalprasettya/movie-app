@@ -1,0 +1,12 @@
+@import "../../styles/base.scss";
+
+.box-nav {
+  .navbar {
+    background-color: $background-color;
+    .container {
+        @include wrapper;
+      }
+  }
+}
+
+
