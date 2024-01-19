@@ -17,6 +17,19 @@ const index = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
+  const convertMinutesToHours = (minutes) => {
+    if (minutes === 0) {
+        return null; // Jika 0 menit, kembalikan null untuk tidak menampilkan durasi
+    }
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+
+    if (remainingMinutes === 0) {
+        return `${hours} jam`; // Jika 0 menit, hanya tampilkan jam
+    }
+    return `${hours} jam ${remainingMinutes} menit`;
+};
+
   const fetchMovieData = async () => {
     const responseMovie = await CallAPI({
       endpoint: `/movie/${id}`,
@@ -51,7 +64,7 @@ const index = () => {
                 <FaStar className={classes["stars"]} /> {data.rating}
               </span>
               <span>
-                {data.releaseYear} | {data.duration}
+                {data.releaseYear} | {convertMinutesToHours(data.duration)}
               </span>
             </div>
             <div className={classes["movie-genre"]}>

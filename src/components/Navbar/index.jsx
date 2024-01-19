@@ -19,7 +19,7 @@ import { FaBars } from "react-icons/fa6";
 
 import classes from "./style.module.scss";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = ["Setting"];
@@ -35,12 +35,15 @@ const index = (props) => {
 
   const handleMove = () => {
     navigate("/movie-editor");
-  }
+  };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "left", padding: "20px" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "left", padding: "20px" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
-        Movie App
+        <p style={{ cursor: "pointer"}} onClick={() => navigate("/")}>Movie App</p>
       </Typography>
       <Divider />
       <List>
@@ -55,7 +58,8 @@ const index = (props) => {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <>
@@ -63,15 +67,25 @@ const index = (props) => {
         <AppBar className={classes["navbar"]} component="nav">
           <div className={classes["container"]}>
             <Toolbar>
-              <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" } }}
+              >
                 <FaBars />
               </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-                Movie App
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              >
+                <p style={{ cursor: "pointer"}} onClick={() => navigate("/")}>Movie App</p>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: "#fff" }}>
+                  <Button onClick={() => navigate("movie-editor")} key={item} sx={{ color: "#fff" }}>
                     {item}
                   </Button>
                 ))}
@@ -90,7 +104,10 @@ const index = (props) => {
             }}
             sx={{
               display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
             }}
           >
             {drawer}
