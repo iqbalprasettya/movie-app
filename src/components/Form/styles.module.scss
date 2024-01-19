@@ -1,5 +1,7 @@
+@import "../../styles/base.scss";
+
 .addButton {
-    background-color: #000;
+    background-color: $background-color;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -20,11 +22,16 @@
         padding: 20px;
         max-width: 600px;
         margin: 0 auto;
-        height: 400px;
+        height: 500px;
         overflow-y: scroll;
     }
-
+    .formCard::-webkit-scrollbar {
+        display: none;
+      }
     
+    .formTitle {
+        color: $background-color;
+    }
 
     form {
         display: flex;
@@ -34,19 +41,25 @@
     label {
         font-weight: bold;
         margin-top: 10px;
+        color: $background-color;
+        text-align: left;
     }
 
     input,
     select {
-        text-align: center;
         padding: 8px;
         margin-bottom: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid $background-color;
         border-radius: 4px;
+        color: $background-color;
+    }
+
+    .ratingSlider {
+        color: $background-color;
     }
 
     button {
-        background-color: #000;
+        background-color: $background-color;
         color: #fff;
         border: none;
         padding: 10px;
@@ -56,7 +69,7 @@
     }
 
     button:hover {
-        background-color: #333;
+        opacity: 80%;
     }
 
     h2 {
