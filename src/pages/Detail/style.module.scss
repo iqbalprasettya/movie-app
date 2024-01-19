@@ -5,23 +5,32 @@ body {
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 90px;
   @include wrapper;
-
+  .back-btn {
+    margin: 20px 0;
+    background-color: $button-color;
+    color: $text-button;
+  }
+  .back-btn:hover {
+    background-color: $button-color;
+    color: $text-button;
+  }
   .movie-detail {
     @include row;
     gap: 20px;
     border: 3px solid $stroke-color;
     padding: 30px;
     border-radius: 20px;
-    color: $paragraph-color;
+    color: $text-button;
+    background-color: #fff;
     margin-bottom: 30px;
     @include apply-at-md-size {
       @include col;
       justify-content: center;
     }
     h1 {
-      color: $headline-color;
+      color: $text-button;
     }
     .movie-image {
       border-radius: 20px;
@@ -58,7 +67,7 @@ body {
     }
   }
   .movie-comments {
-    color: $paragraph-color;
+    color: $text-button;
     padding: 30px 0;
     h2 {
       color: $headline-color;
@@ -69,8 +78,11 @@ body {
       border: 3px solid $stroke-color;
       padding: 30px;
       border-radius: 20px;
-      .user {
-        font-size: 46px;
+      background-color: #fff;
+      .avatar {
+        .user {
+          font-size: 36px;
+        }
       }
     }
   }
